@@ -1,0 +1,26 @@
+== Informazioni aggiuntive
+
+=== Linee guida per la progettazione grafica
+
+Il sistema è stato progettato seguendo le linee guida del Material Design
+adottando un tema _Scuro_ gradevole alla vista. Si è cercato di produrre un sito
+_usabile_, alla portata di chiunque, anche di chi non è specializzato nelle
+analisi delle emozioni.
+
+=== Linee guida per l'accessibilità
+
+Sono state rispettate le linee guida _Web Content Accessibility Guidelines
+(WCAG) 2.1_ (https://www.w3.org/TR/WCAG21/) portando il sistema ad un livello
+_AA_ (su scala A, AA e AAA). Il tool per testarle è _Siteimprove_
+(https://siteimprove.com/).
+
+=== Responsività del sistema
+
+L'interfaccia è stata realizzata tenendo conto di un possibile utilizzo tramite
+dispositivi mobili tenendo conto delle risoluzioni dei dispositivi più diffusi
+in commercio.
+
+=== Ulteriori informazioni
+
+Per ulteriori informazioni è possibile contattare il gruppo tramite il
+_referente_ alla mail a.annese23@studenti.uniba.it.

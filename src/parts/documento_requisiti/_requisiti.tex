@@ -1,0 +1,215 @@
+% Copyright (c)  2019  FSC.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+
+\chapter{Requisiti del sito}\label{chap:requisiti-del-sito}
+
+\section{Requisiti di architettura}\label{sec:requisiti-di-architettura}
+
+L'architettura informativa illustrata successivamente definisce una struttura 
+generale dello \textit{schema gerarchico} indicante la logica di 
+\textit{navigazione} suddividendo la web app in sezioni e sottosezioni. 
+
+Per quanto riguarda l'area pubblica si prevede quanto segue:
+\begin{itemize}
+	\item \textbf{Landing page}
+	\begin{itemize}
+		\item \textbf{Funzionalità}
+		\item \textbf{Su di noi}
+	\end{itemize}
+\item \textbf{Login}
+\item \textbf{Registrazione}
+\end{itemize}
+Per quanto riguarda l'area privata, ovvero per ogni utente loggato si prevede 
+quanto segue (\textit{con (*) viene indicata la molteplice quantità 
+dell'oggetto a cui è affiancato}): 
+\begin{itemize}
+	\item \textbf{Home}
+	\begin{itemize}
+		\item \textbf{Progetti (*)} 
+		\begin{itemize}
+			\item \textbf{Sottoprogetti (*)}
+			\begin{itemize}
+				\item \textbf{Video (*)}
+			\end{itemize}
+		\item \textbf{Video (*)}
+		\end{itemize}
+	\item \textbf{Lingua}
+	\begin{itemize}
+		\item \textbf{Italiano}
+		\item \textbf{Inglese}
+	\end{itemize}
+\item \textbf{Profilo}
+\item \textbf{Logout}
+	\end{itemize}
+\end{itemize}
+Indicativamente, la struttura di navigazione delle pagine più importante è 
+definita mediante le seguenti \textit{gabbie logiche grafiche minimali}. Si 
+riserverà al web designer il compito di definire meccanismi di navigazione e 
+layout grafici più avanzati che ne determineranno il risultato finale.
+
+\input{images/gabbie-di-massima.tex}
+
+\section{Requisiti di comunicazione}\label{sec:requisiti-di-comunicazione}
+Le pagine interne della piattaforma web Emotionally dovranno essere 
+graficamente coerenti tra di loro, fatta eccezione per la pagina di landing che 
+dovrà presentare la piattaforma all'utente. La piattaforma web sarà bilingue 
+(italiano e inglese).
+
+Ogni pagina del sistema Emotionally dovrà:
+\begin{itemize}
+	\item contenere il logo del sistema stesso posizionato in alto a sinistra,
+	\item avere un comportamento responsive: il sito deve ridimensionarsi 
+	automaticamente al variare della risoluzionie video e della dimnesione 
+	della finestra del browser,
+	\item contenere caratteri la cui dimensione dovrà essere modificabile 
+	dall'utente,
+	\item avere una funzione accessibile, almeno di livello AA.
+\end{itemize}
+La landing page presenta, attraverso un'interfaccia chiara e usabile, le 
+funzionalità del sistema e permette all'utente di approcciare il riconoscimento 
+delle emozioni. 
+
+Inoltre, per sottolineare la divisione tra il sistema e la landing page si è 
+deciso di utilizzare un bottone di login differente rispetto allo stile dei 
+link presenti nella navbar. A seguito del click del bottone, l'utente viene 
+reindirizzato alla pagina di login che rappresenta, seppur in parte, lo stile 
+grafico del sistema.
+
+\section{Requisiti funzionali}\label{sec:requisiti-funzionali}
+
+In questa sezione vengono illustrati i casi d'uso e le relative 
+rappresentazioni tabellari riferiti alle diverse funzionalità che Emotionally 
+offre ai suoi utenti. 
+
+\subsection{Casi d'uso}
+
+\begin{figure}[H]
+	\centering
+    \caption{I casi d'uso del sistema.}
+    \label{fig:casi-duso}
+    \resizebox{\textwidth}{!}{%
+        \input{images/casi-duso.tex}
+    }
+\end{figure}
+
+\subsection{Rappresentazione tabellare}
+% TODO: Complete use case scenarios
+\input{parts/documento_requisiti/_scenari.tex}
+
+\subsection{Modello dei dati}
+Di seguito è riportato il modello concettuale della base di dati:
+
+\begin{figure}[H]
+	\centering
+	\caption{Il modello concettuale della base di dati}
+	\label{fig:er}
+	\input{images/er.tex}
+\end{figure}
+
+\subsection{Sicurezza e privacy}
+Per quanto riguarda i sistemi di sicurezza, la piattaforma web è suddivisa in 
+due macrosezioni: l'area pubblica (landing page) e l'area privata.
+
+Nella landing page, ogni visitatore può accedervi liberamente con lo scopo di 
+visionare quello che la web app offre prima di effettuare la registrazione. In 
+questa area pubblica, inoltre, è possibile effettuare dei test delle emozioni 
+senza, per quanto riguarda il team e la finalità di questo progetto, salvare 
+dati sensibili.
+
+Per quanto riguarda l'area privata, l'accesso è consentito solo attraverso il 
+login. Da qui l'utente loggato avrà a disposizione di tutti gli strumenti utili 
+per poter effettuare un'analisi. L'utente, inoltre, per poter accedere dovrà 
+quindi effettuare una prima fase di registrazione dove dovrà fornire dati 
+sensibili quali email, password, nome e cognome.
+
+\section{Requisiti di contenuto}\label{sec:requisiti-di-contenuto}
+\begin{table}[H]
+	\centering
+	\caption{Contenuti di Emotionally.}
+	\label{tab:bisogni-utenti}
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.25\textwidth}|m{.25\textwidth}|m{.25\textwidth}|>{\centering\arraybackslash}m{.1\textwidth}|@{}}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Sezione}}   & {\textbf{Sottosezione}}     & {\textbf{Requisiti di 
+		contenuto}} & {\textbf{Dove trovare le informazioni}} 
+		\\\hline
+		\endfirsthead
+		\cellcolor{white!0}  & Funzionalità & Questa sezione ha lo scopo di 
+		presentare 
+		le funzionalità offerte da Emotionally attraverso una breve descrizione 
+		delle stesse. & Non è possibile reperire le informazioni in quanto sono 
+		state create dal team FSC.\\
+		\multirow{-2}{*}{Landing page} & Su di noi & Questa sezione ha lo scopo 
+		di 
+		presentare i componenti del team sviluppatore di Emotionally. & In 
+		quanto le informazioni riguardano i componenti del team, non è 
+		possibile reperire tali informazioni. \\		
+		\hline
+	\end{longtable}
+\end{table}
+
+\section{Requisiti di gestione}\label{sec:requisiti-di-gestione}
+La memorizzazzione dei dati sensibili dell'utente e dei suoi progetti verrà 
+effettuata su una base di dati creata dal team FSC. Gli stessi verranno 
+sottoposti a backup sistematici per evitare la loro perdita nel momento in cui 
+il sistema si interrompa per qualsiasi causa.
+
+Il team FSC, posto dal committente come gruppo produttore della piattaforma 
+web, si occuperà della manutenzione ordinaria e straordinaria del sistema, 
+affinchè gli obiettivi definiti di comune accordo non cessino di funzionare.
+
+Per quanto riguarda la gestione dei contenuti di Emotionally, saranno gli 
+utenti stessi che inseriranno i contenuti che saranno i video da analizzare per 
+le proprie analisi senza doversi preoccupare della struttura architetturale 
+implementata, permettendo la semplicità nelle operazioni di upload. Il sistema 
+all'analisi di un progetto o di un singolo video renderà disponibile un report 
+che l'utente può visionare e, se vuole, scaricare. 
+Sarà compito del team FSC a redigere i contenuti della landing page, dove 
+verranno riportate descrizioni delle funzionalità del sistema, concordati con 
+il committente.
+
+\section{Requisiti di accessibilità}\label{sec:requisiti-di-accessibilita}
+Si vuole creare un sistema che rispetti le linee guida WCAG con livello AA. 
+Inoltre deve essere fornito all'utente la possibilità di modificare la 
+dimensione dei caratteri.
+
+Per quanto concerne le prestazioni del sito, non è possibile stabilire a priori 
+il traffico e l'ampiezza di banda necessaria. Per quanto riguarda gli accessi 
+contemporanei al sito, invece, si presuppone un numero non troppo ampio di 
+visitatori nell'area pubblica in quanto funge solo da vetrina per i visitatori 
+sporadici (compresa la funzionalità di ``analisi di test'', per cui non si 
+prevede un elevato numero di accessi concorrenti). L'area privata è invece 
+diversa, ma i problemi sono limitati in quanto i diversi utenti non hanno 
+accesso a progetti di altri utenti (fatte poche eccezioni), riducendo al minimo 
+i problemi legati agli accessi concorrenti.
+
+È garantita la compatibilità con i maggiori browser attualmente in uso (Google 
+Chrome, Mozilla Firefox). Il funzionamento su altri browser non specificati o 
+con vari plugin o impostazioni personalizzate non è garantito. Per qualsiasi 
+problema è comunque possibile contattare il team FSC al fine di provvedere alla 
+manutenzione.
+
+\section{Requisiti di usabilità}\label{sec:requisiti-di-usabilita}
+La piattaforma web cerca di garantire l'usabilità (secondo lo standard ISO 
+9241) delle sue funzionalità nel migliore modo possibile. A tale fine, il team 
+si impegna a utilizzare un processo che garantisca la \textit{usability by 
+design}.
+
+Per quanto riguarda le operazioni di visualizzazione, fatta eccezione per 
+problemi legati alla connettività, il team garantisce una discreta velocità e 
+un'interfaccia visiva facilmente comprensibile.
+
+Per quanto riguarda le operazioni di salvataggio delle modifiche e upload di 
+file, il team garantisce (fatta eccezione per problemi legati alla 
+connettività) un alto tasso di successo (qualora le informazioni fornite 
+rispettino i vincoli imposti dal team). L'errato inserimento di un dato sarà 
+notificato all'utente mediante un messaggio di errore facilmente comprensibile.
+
+Per poter usufruire di tutte le funzionalità offerte da Emotionally e in modo 
+che siano correttamente funzionanti è consigliato l'uso del browser FireFox.

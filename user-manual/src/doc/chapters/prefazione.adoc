@@ -1,0 +1,26 @@
+[preface#preface]
+== Prefazione
+
+
+Il presente documento rappresenta il manuale d'uso del sistema "`Emotionally`",
+un sistema progettato e sviluppato dal team "`__F.S.C. -- Five Students of
+Computer Science__`" come progetto universitario legato al corso, tenuto dal Prof.
+Giuseppe Desolda, di "`Programmazione per il Web`" del terzo anno del Corso di
+Laurea in Informatica e Comunicazione Digitale (sede di Taranto dell'Università
+degli Studi di Bari "`A. Moro`").
+
+NOTE: È disponibile una versione online del presente documento. Tale versione è
+responsive e comodamente consultabile anche da dispositivi mobili. È possibile
+visitare il manuale online al seguente indirizzo:
+http://bit.ly/EmotionallyManuale.
+
+In particolare il sistema ha l'obiettivo di creare una interfaccia web-based a
+un sistema di analisi delle emozioni che consenta di condurre delle analisi
+statistiche a partire da dei video.
+
+// WARNING: Il team ha notato durante le  sessioni di test (alpha e beta) che,
+// senza alcun valido motivo apparente, alcune delle azioni descritte in questo
+// documento riscontravano problemi ed errori pur essendo condotte nel modo
+// corretto. Tali problemi sono, tuttavia, legati alle API esterne utilizzate che,
+// alla data di stesura di questo documento ({revdate}), risultano essere in fase
+// di aggiornamento.

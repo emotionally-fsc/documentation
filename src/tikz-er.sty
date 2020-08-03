@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start of tikz-er.sty
+%
+% Some macros for ER Diagrams.
+% Home page of project: 
+% Author: Andrea Esposito
+% Style from: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\NeedsTeXFormat{LaTeX2e}%
+\ProvidesPackage{tikz-er}[2020/01/22]%
+%
+\RequirePackage{ifthen}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning,shapes.multipart,shapes}
+\RequirePackage[normalem]{ulem}
+
+\newcommand{\erentity}[3][]{%
+	\node[draw,
+	rectangle split,
+	rectangle split parts=2,
+	rectangle split part fill={emotionally-color!35,white},
+	minimum width=2.5cm,
+	text width=2cm,
+	align=left, #1] ({#2}) {%
+		{#2}
+		\nodepart{second}
+		{#3}
+	}
+}
+
+\newcommand{\errelation}[2][]{%
+	\node[midway,diamond, 
+	draw, 
+	shape aspect=2, 
+	inner sep = 2pt,
+	text centered,
+	fill=emotionally-color!20!white,
+	font=\itshape,#1](#2){#2}
+}
+
+\newcommand{\erassoc}[5][]{%
+	\draw[#1] (#2) -- (#3) node[midway,#5]{#4}
+}
+
+\newcommand{\erattr}[5][]{%
+	\node[#1, circle, draw=black, fill=none,label=#2:{#3}] (#5) at (#4) {};
+}
+
+\newcommand{\erattrkey}[5][]{%
+	\node[#1, circle, draw=black, fill=black,label=#2:{#3}] (#5) at (#4) {};
+}
+
+\newcommand{\erkey}[1]{\underline{#1}}
+\newcommand{\erfkey}[1]{\dashuline{#1}}

@@ -1,0 +1,65 @@
+[#installazione]
+== Installazione
+
+=== Pacchetti necessari
+Se si vuole utilizzare il sistema sulla propria macchina è necessario scaricare
+e installare PHP (vedi https://www.sitepoint.com/how-to-install-php-on-windows/).
+Successivamente si può procedere a scaricare l'ultima versione del pacchetto 
+software (https://github.com/F-S-C/Emotionally/releases/latest). 
+
+Una volta scaricata, bisognerà estrarre la cartella _Emotionally_UwAmp_ e aprirla:
+
+image::../screenshots/installazione_estratta.JPG[alt=Cartella estratta]
+
+=== Comandi preliminari
+
+Entrare nella sottocartella _www_ (presente all'interno del pacchetto _Emotionally_UwAmp_) e cliccare sul percorso della cartella, presente nella parte alta della finestra di esplora risorse. Una volta cliccato, digitare il comando _cmd_:
+
+image::../screenshots/installazione0.JPG[alt=Esecuzione CMD]
+
+Si aprirà una finestra simile a questa:
+
+image::../screenshots/installazione1.JPG[alt=CMD]
+
+Successivamente digitare il comando _php artisan config:cache_ e premere il pulsante **INVIO**:
+
+image::../screenshots/installazione2.JPG[alt=Primo Comando]
+
+Dopo aver eseguito il comando, digitare _php artisan route:cache_ e cliccare nuovamente **INVIO**:
+
+image::../screenshots/installazione3.JPG[alt=Secondo Comando]
+
+Adesso è possibile chiudere la finestra e ritornare all'interno della cartella _Emotionally_UwAmp_. Qui è possibile avviare l'eseguibile di _UwAmp_ (illustrato nella sezione successiva).
+
+=== Avvio e termine dei servizi UwAmp
+
+Avviare il software _UwAmp_ (_Emotionally_UwAmp/UwAmp.exe_).
+
+NOTE: È consigliato (ma non necessario) avviare il file con i permessi di
+amministratore per agevolare l'avvio e l'arresto dei servizi necessari al
+corretto funzionamento del software.
+
+image::../screenshots/installazione4.JPG[alt=UwAmp all'interno della cartella]
+
+Una volta avviato _UwAmp.exe_ sarà richiesta la concessione di alcuni permessi **necessari** al pacchetto _Apache_ (solo al primo avvio di _UwAmp_). 
+Cliccare quindi su _Consenti accesso_:
+
+image::../screenshots/installazione5.JPG[alt=Permessi Apache]
+
+Fatto ciò si aprirà la schermata di _UwAmp_:
+
+image::../screenshots/installazione6.JPG[alt=Schermata UwAmp]
+
+I servizi saranno azionati automaticamente e si potrà
+utilizzare il sistema aprendo il browser e digitando l'indirizzo
+__http://localhost/__.
+
+Se la pagina del sistema risulta irraggiungibile e, nella schermata di _UwAmp_ risulta cliccabile il pulsante _Start_ (in alto a sinistra), sarà sufficiente cliccarlo e attendere che le bande alla sua destra si colorino di verde (vedi figura precedente). Sarà quindi possibile riporvare ad accedere al sistema tramite l'indirizzo __http://localhost/__.
+
+NOTE: Per fermare i servizi basta cliccare sul pulsante _Stop_ e chiudere il pannello di _UwAmp_.
+
+WARNING: Nel caso in cui si verificasse un'eccezione di questo tipo
+all'apertura dell'applicazione (vedi immagine successiva) sarà necessario
+avviare il comando 'php artisan config:cache'. Per i passaggi approfonditi è possibile seguire i passaggi descritti in <<Comandi preliminari>>.
+
+image::../screenshots/installazione-errore.JPG[alt=Eccezione]

@@ -1,0 +1,35 @@
+require "asciidoctor"
+require "yaml"
+require "date"
+require "ruby-progressbar"
+require "roo"
+require "zip"
+
+require_relative "./src/ruby/asciidoctor-pdf-extension"
+require_relative "./src/ruby/generation-utils"
+require_relative "./src/ruby/files-location"
+
+task default: %w[pdf html]
+
+desc "Genera il PDF nei vari formati disponibili"
+task :pdf do
+  Rake.application.in_namespace(:pdf) { |x| x.tasks.each(&:invoke) }
+end
+
+namespace :pdf do
+  desc "Genera il manuale (in versione per la stampa)"
+  task :print do
+    puts "Building PDF (print)"
+    Asciidoctor.convert_file ReportFiles::REPORT, backend: "pdf", safe: :unsafe, to_dir: "out/", attributes: { "lang" => "it", "pdf-theme" => "book", "pdf-themesdir" => "./src/themes", "media" => "prepress" }, mkdirs: true, to_file: "#{ReportFiles::REPORT_FILE_NAME}_print.pdf"
+  end
+  # desc "Genera il manuale (in versione per la lettura in digitale)"
+  # task :screen do
+  #   puts "Building PDF (screen)"
+  #   Asciidoctor.convert_file ReportFiles::REPORT, backend: "pdf", safe: :unsafe, to_dir: "out/", attributes: { "lang" => "it", "pdf-theme" => "book", "pdf-themesdir" => "./src/themes", "media" => "screen" }, mkdirs: true, to_file: "#{ReportFiles::REPORT_FILE_NAME}_screen.pdf"
+  # end
+end
+
+task :html do
+  puts "Building HTML"
+  Asciidoctor.convert_file ReportFiles::REPORT, backend: "html", safe: :unsafe, to_dir: "../", attributes: { "lang" => "it", 'imagesdir'=>'user-manual/src/doc' }, to_file: "manual.html", mkdirs: true
+end

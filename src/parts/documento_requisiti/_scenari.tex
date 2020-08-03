@@ -1,0 +1,306 @@
+% Copyright (c)  2019  FSC.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Registration}
+	\label{tab:use-case-registration}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Registration (ID: 1)}} \\\hline
+		\endhead
+		Descrizione & L'utente visitatore si registra alla piattaforma Emotionally.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Guest\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente non deve essere già registrato alla piattaforma\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. Il guest chiede al sistema di potersi registrare alla piattaforma\\\hspace{0.0cm}2. Il sistema permette la registrazione chiedendo informazioni utili per la registrazione\\\hspace{0.5cm}\hspace{0.0cm}2.1. Fintantochè l'utente non inserisce una corretta email\\\hspace{0.5cm}\hspace{0.0cm}2.2. Il sistema chiede l'email\\\hspace{0.5cm}\hspace{0.0cm}2.3. L'utente inserisce l'email\\\hspace{0.0cm}3. Fintantochè l'utente non inserisce una password valida\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema chiede la password\\\hspace{0.5cm}\hspace{0.0cm}3.2. L'utente inserisce la password\\\hspace{0.0cm}4. Il sistema chiede il nome dell'utente\\\hspace{0.5cm}\hspace{0.0cm}4.1. L'utente inserisce il nome\\\hspace{0.0cm}5. Il sistema chiede il cognome dell'utente\\\hspace{0.5cm}\hspace{0.0cm}5.1. L'utente inserisce il cognome\\\hspace{0.0cm}6. Il sistema chiede il sesso dell'utente\\\hspace{0.5cm}\hspace{0.0cm}6.1. L'utente inserisce il sesso\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente è registrato alla piattaforma\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo viene attivato al punto 2: il sistema informa l'utente che l'email inserita non è valida o corretta\\~~\llap{\textbullet}~~Uno scenario alternativo viene attivato al punto 3: il sistema informa l'utente che la password inserita non è valida\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Login}
+	\label{tab:use-case-login}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Login (ID: 3)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole effettuare l'accesso alla piattaforma Emotionally\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver già effettuato la registrazione\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter effettuare il login\\\hspace{0.0cm}2. Il sistema chiede all'utente di inserire le informazioni necessarie per effettuare l'accesso\\\hspace{0.0cm}3. Fintantochè l'utente non inserisce un'email valida\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema chiede all'utente di inserire l'email\\\hspace{0.5cm}\hspace{0.0cm}3.2. L'utente inserisce l'email\\\hspace{0.0cm}4. Fintantochè l'utente non inserisce una password valida\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema chiede all'utente di inserire la password\\\hspace{0.5cm}\hspace{0.0cm}4.2. L'utente inserisce la password\\\hspace{0.0cm}5. Il sistema fa accedere l'utente alla piattaforma\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha effettuato il login\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo viene innescato al punto 3: il sistema avvisa l'utente che l'email inserita non è valida.\\~~\llap{\textbullet}~~Uno scenario alternativo viene innescato al punto 4: il sistema avvisa l'utente che la password inserita non è valida.\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Logout}
+	\label{tab:use-case-logout}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Logout (ID: 4)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole uscire dalla piattaforma Emotionally.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere già loggato alla piattaforma\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di porter effettuare il logout\\\hspace{0.0cm}2. Il sistema chiede all'utente la conferma di logout\\\hspace{0.0cm}3. Se l'utente conferma\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema permetterà l'uscita dalla piattaforma\\\hspace{0.0cm}4. Altrimenti\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema fermerà il processo di logout\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha effettuato il logout\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Create project}
+	\label{tab:use-case-create-project}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Create project (ID: 5)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole creare un nuovo progetto.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato alla piattaforma\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter creare un nuovo progetto\\\hspace{0.0cm}2. Il sistema chiede delle informazioni relative al nuovo progetto\\\hspace{0.0cm}3. Fintantochè l'utente non inserisce un nome di progetto valido\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema chiede all'utente di inserire il nome di progetto\\\hspace{0.5cm}\hspace{0.0cm}3.2. L'utente inserisce il nome di progetto\\\hspace{0.0cm}4. Fintantochè l'utente non inserisce una cartella padre valido\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema chiede all'utente di inserire la cartella padre del progetto\\\hspace{0.5cm}\hspace{0.0cm}4.2. L'utente inserisce la cartella padre del progetto\\\hspace{0.0cm}5. Il sistema effettua la creazione del nuovo progetto\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha creato un nuovo progetto\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo viene innescato al punto 3: il sistema avvisa l'utente di aver inserito un nome di progetto non valido.\\~~\llap{\textbullet}~~Uno scenario alternativo viene innescato al punto 4: Il sistema avvisa l'utente di aver inserito una cartella padre errate\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: View project}
+	\label{tab:use-case-view-project}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{View project (ID: 6)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole visualizzare uno dei suoi progetti.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver effettuato la procedura di login\\~~\llap{\textbullet}~~L'utente deve aver già creato il progetto che vuole visualizzare\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter visualizzare un suo progetto\\\hspace{0.0cm}2. Il sistema permette la visualizzazione del progetto scelto all'utente richiedente\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente visualizza il progetto\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Edit project}
+	\label{tab:use-case-edit-project}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Edit project (ID: 7)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole modificare un progetto da lui scelto.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato alla piattaforma\\~~\llap{\textbullet}~~Il progetto scelto dall'utente deve essere già stato creato\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di porter modificare il progetto\\\hspace{0.0cm}2. Il sistema permette all'utente di modificare il progetto richiesto\\\hspace{0.0cm}3. Se l'utente chiede di rinominare il progetto\\\hspace{0.5cm}\hspace{0.0cm}3.1. Fintantochè il nuovo nome del progetto non è valido\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.1. Il sistema chiede all'utente di inserire il nuovo nome del progetto\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.2. L'utente inserisce il nuovo nome del progetto\\\hspace{0.0cm}4. Se l'utente chiede di spostare un video\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema chiede all'utente in quale progetto vuole spostarlo\\\hspace{0.5cm}\hspace{0.0cm}4.2. Se il video è già presente nel progetto in cui si intende spostarlo\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}4.2.1. Il sistema chiede all'utente conferma per lo spostamento del video\\\hspace{0.5cm}\hspace{0.0cm}4.3. Altrimenti\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Il progetto scelto è stato modificato\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo viene innescato al punto 4.2: Il sistema chiede all'utente se vuole rinominare il video, se vuole sovrascrivere il video con lo stesso nome di quello che si vuole spostare o se si vuole annullare l'operazione\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Remove project}
+	\label{tab:use-case-remove-project}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Remove project (ID: 8)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole rimuovere un suo progetto dalla piattaforma.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver effettuato la procedura di login\\~~\llap{\textbullet}~~Il progetto da eliminare deve essere stato già creato dall'utente\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter rimuovere il progetto scelto\\\hspace{0.0cm}2. Il sistema chiede all'utente conferma dell'eliminazione del progetto scelto\\\hspace{0.0cm}3. Se l'utente confema\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema provvede all'eliminazione del progetto scelto\\\hspace{0.0cm}4. Altrimenti\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema annullerà l'operazione\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Il progetto scelto dall'utente è stato eliminato\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Upload video}
+	\label{tab:use-case-upload-video}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Upload video (ID: 9)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole inserire un nuovo video.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato nel sistema\\~~\llap{\textbullet}~~Il progetto in cui inserire il video deve essere stato già creato\\~~\llap{\textbullet}~~Il video non deve essere stato già inserito nel progetto in cui lo vuole caricare\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente richiede al sistema di poter inserire un nuovo video\\\hspace{0.0cm}2. Finantochè l'utente non confermi o non annulli l'operazione\\\hspace{0.5cm}\hspace{0.0cm}2.1. Il sistema chiede all'utente di inserire il video\\\hspace{0.5cm}\hspace{0.0cm}2.2. L'utente inserisce il video che vuole caricare\\\hspace{0.5cm}\hspace{0.0cm}2.3. Se l'utente vuole modificare il nome del video da caricare\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}2.3.1. Il sistema permette all'utente di modificare il nome del video\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}2.3.2. L'utente inserisce il nome del video\\\hspace{0.5cm}\hspace{0.0cm}2.4. Altrimenti\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}2.4.1. Il sistema lascerà il nome del video al suo stesso inserimento\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha inserito un nuovo video\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Edit video}
+	\label{tab:use-case-edit-video}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Edit video (ID: 10)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole modificare un video da lui scelto.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver effettuato la procedura di login\\~~\llap{\textbullet}~~Il video deve essere stato già caricato\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter effettuare modifiche al video selezionato\\\hspace{0.0cm}2. Il sistema permette all'utente di modificare le informazioni inerenti al video\\\hspace{0.0cm}3. Fintantochè l'utente non salvi le modifiche o annulli l'operazione\\\hspace{0.5cm}\hspace{0.0cm}3.1. Se l'utente vuole modificare il nome del video selezionato\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.1. Fintantochè l'utente non inserisce un nome del video valido\\\hspace{1.5cm}\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.1.1. Il sistema chiede all'utente il nuovo nome del video\\\hspace{1.5cm}\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.1.2. L'utente inserisce il nome del video\\\hspace{0.5cm}\hspace{0.0cm}3.2. Se l'utente vuole modificare l'intervallo di analisi del video\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.2.1. Il sistema chiede all'utente di selezionare un intervallo di analisi\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.2.2. L'utente inserisce l'intervallo di analisi del video richiesto\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha modificato il video selezionato\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo si innesca nel punto 3.1.1: il sistema avverte l'utente che il nome inserito non è valido\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Remove video}
+	\label{tab:use-case-remove-video}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Remove video (ID: 11)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole rimuove un video dalla piattaforma Emotionally.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver effettuato il login\\~~\llap{\textbullet}~~Il video deve essere stato già caricato sulla piattaforma\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di rimuovere un video da lui scelto\\\hspace{0.0cm}2. Il sistema chiede conferma di eliminazione all'utente\\\hspace{0.0cm}3. Se l'utente conferma\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema provvedere a rimuovere il video selezionato dalla piattaforma\\\hspace{0.0cm}4. Altrimenti\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema annulla l'operazione\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Il video richiesto dall'utente è stato rimosso\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: View video}
+	\label{tab:use-case-view-video}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{View video (ID: 12)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole visionare un video da lui scelto.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato\\~~\llap{\textbullet}~~Il video deve essere già stato caricato nella piattaforma\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter visionare un video\\\hspace{0.0cm}2. Il sistema permette la visione del video scelto dall'utente\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente visualizza il video selezionato\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Share project}
+	\label{tab:use-case-share-project}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Share project (ID: 13)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole condividere un proprio progetto con un altro o con altri utenti.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente che condivide il suo progetto deve aver effettuato la procedura di login\\~~\llap{\textbullet}~~Il progetto deve essere stato già creato\\~~\llap{\textbullet}~~L'utente o gli utenti con cui codividere il progetto devono essere registrati alla piattaforma Emotionally\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente richiede al sistema di poter condividere il progetto selezionato con uno o più utenti\\\hspace{0.0cm}2. Il sistema richiede all'utente alcune informazioni riguardanti gli utenti da ``invitare''\\\hspace{0.0cm}3. Se l'utente non annulla l'operazione di condivisione\\\hspace{0.5cm}\hspace{0.0cm}3.1. Il sistema richiede l'e-mail degli utenti a cui condividere il progetto\\\hspace{0.5cm}\hspace{0.0cm}3.2. L'utente inserisce l'email degli utenti\\\hspace{0.5cm}\hspace{0.0cm}3.3. Il sistema richiede all'utente che condivide il progetto di inserire i permessi che essi potranno avere sul progetto\\\hspace{0.5cm}\hspace{0.0cm}3.4. L'utente seleziona i permessi\\\hspace{0.5cm}\hspace{0.0cm}3.5. Se l'utente conferma la condivisione\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.5.1. Il sistema permette la condivisione del progetto scelto\\\hspace{0.0cm}4. Altrimenti\\\hspace{0.5cm}\hspace{0.0cm}4.1. Il sistema annulla l'operazione di condivisione\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente ha condiviso il proprio progetto con altri\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Update user data}
+	\label{tab:use-case-update-user-data}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Update user data (ID: 15)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole aggiornare i propri dati inseriti in fase di registrazione.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve aver effettuato già la procedura di login\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter modificare i propri dati\\\hspace{0.0cm}2. Il sistema permette la modifica dei dati dell'utente richiedente\\\hspace{0.0cm}3. Fintantochè l'utente non salvi le informazioni aggiornate o non annulli l'operazione di modifica\\\hspace{0.5cm}\hspace{0.0cm}3.1. Se l'utente decide di modificare il nome\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.1.1. L'utente modifica il nome\\\hspace{0.5cm}\hspace{0.0cm}3.2. Altrimenti\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.2.1. Il nome non verrà variato da quello già presente\\\hspace{0.5cm}\hspace{0.0cm}3.3. Se l'utente decide di modificare il cognome\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.3.1. L'utente modifica il cognome\\\hspace{0.5cm}\hspace{0.0cm}3.4. Altrimenti\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.4.1. Il cognome non verrà variato da quello già presente\\\hspace{0.5cm}\hspace{0.0cm}3.5. Se l'utente vuole modificare il sesso\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.5.1. L'utente modifica il sesso\\\hspace{0.5cm}\hspace{0.0cm}3.6. Altrimenti\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}3.6.1. Il sesso non verrà variato da quello già presente\\\hspace{0.0cm}4. Se l'utente chiede di modificare la propria password\\\hspace{0.5cm}\hspace{0.0cm}4.1. Fintantochè l'utente non inserisce la vecchia password valida\\\hspace{0.5cm}\hspace{0.0cm}4.2. Fintantochè l'utente non inserisce una nuova password valida\\\hspace{0.5cm}\hspace{0.0cm}4.3. Fintantochè l'utente non re-inserisce correttamente la nuova password\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}4.3.1. Il sistema chiede all'utente di re-inserire la nuova password\\\hspace{1.0cm}\hspace{0.5cm}\hspace{0.0cm}4.3.2. L'utente re-inserisce la nuova password\\\hspace{0.5cm}\hspace{0.0cm}4.4. Il sistema provvederà alla modifica della password\\\hspace{0.0cm}5. Altrimenti\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~I dati richiesti dall'utente sono stati modificati.\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Uno scenario alternativo viene innescato nel punto 4.1: il sistema avvisa l'utente che la vecchia password non è stata inserita correttamente.\\~~\llap{\textbullet}~~Uno scenario alternativo viene innescato nel punto 4.2: il sistema avvisa l'utente che la nuova password inserita non è valida.\\~~\llap{\textbullet}~~Uno scenario alternativo viene innescato nel punto 4.3: il sistema avvisa l'utente che la nuova password non è stata re-inserita correttamente.\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: View report}
+	\label{tab:use-case-view-report}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{View report (ID: 16)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole visualizzare un report.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato\\~~\llap{\textbullet}~~Il progetto deve essere stato già creato\\~~\llap{\textbullet}~~Il video deve essere stato già caricato\\~~\llap{\textbullet}~~Il progetto deve contenere almeno un video\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter visualizzare il report\\\hspace{0.0cm}2. Il sistema permette la visualizzazione del report richiesto\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente visualizza il report\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}
+
+%\begin{table}[H]
+	%\centering
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.2\textwidth}|m{.7\textwidth}|@{}}
+	\caption{Use Case: Download report}
+	\label{tab:use-case-download-report}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Nome caso d'uso}} & {\textbf{Download report (ID: 19)}} \\\hline
+		\endhead
+		Descrizione & L'utente vuole scaricare il report di un suo progetto o di un suo video.\\
+		Attori & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~User\\\end{tabular}\\
+		Pre-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente deve essere loggato\\~~\llap{\textbullet}~~Il progetto deve essere stato già creato\\~~\llap{\textbullet}~~Il video deve essere stato già caricato\\~~\llap{\textbullet}~~Il progetto deve contenere almeno un video\\\end{tabular}\\
+		Sequenza delle azioni & \begin{tabular}{m{0.9\linewidth}}\hspace{0.0cm}1. L'utente chiede al sistema di poter scaricare il report di un suo progetto o di un suo video\\\hspace{0.0cm}2. Il sistema chiede all'utente in che formato vuole scaricare il pdf\\\end{tabular}\\
+		Post-condizioni & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~L'utente scarica il report richiesto.\\\end{tabular}\\
+		Scenario alternativo & \begin{tabular}{m{0.9\linewidth}}~~\llap{\textbullet}~~Nessuno\\\end{tabular}\\\hline
+		
+	\end{longtable}
+%\end{table}

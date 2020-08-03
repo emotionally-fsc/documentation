@@ -1,0 +1,109 @@
+% Copyright (c)  2019  FSC.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+
+\chapter{Test}\label{chap:test}
+Nella seguente sezione ci si concentra maggiormente sula fase di test del 
+prodotto, analizzandone alcuni scenari di prova e integrandone le modifiche 
+apportare in fase di alpha test e beta test.
+
+\section{Scenari e casi di prova}\label{sec:scenari-casi-prova}
+\paragraph{Scenari di prova per il caso d'uso 'Create project'}
+Scenari di successo:
+\begin{itemize}
+	\item Inserimento progetto
+\end{itemize}
+Scenari di insuccesso:
+\begin{itemize}
+	\item Inserimento fallito a causa del nome scelto per il progetto già 
+	esistente
+\end{itemize}
+
+\paragraph{Scenari di prova per il caso d'uso 'Update user data'}
+Scenari di successo: 
+\begin{itemize}
+	\item Modificato il profilo
+	\begin{itemize}
+		\item Modificato il nome
+		\item Modificato il cognome
+		\item Modificata la password
+	\end{itemize}
+\end{itemize}
+Scenari di insuccesso:
+\begin{itemize}
+	\item Modifica fallita a causa della vecchia password errata
+	\item Modifica fallita a causa della non uguaglianza tra la nuova password 
+	e conferma password (solo in caso si voglia modificare la password)
+\end{itemize}
+
+\section{Alpha test}\label{sec:alpha-test}
+Non è stato condotto un vero e proprio alpha test, ma seguendo il modello 
+basato sui prototipi successivi si sono effettuati i test in ogni fase della 
+realizzazione di ogni singolo prototipo.
+
+Per quanto riguarda la realizzazione del sistema, ad ogni item realizzato si 
+sono effettuati i test di prova per convalidare la funzionalità testata 
+evitando di portarsi uno o più errori fase della realizzazione.
+
+\section{Beta test}
+I seguenti dati riportati nella seguente tabella sono i problemi riscontrati 
+dai soggetti intervistati (con dati anonimi) durante la fase di Beta Test, 
+cercando di sollecitare il sistema nel maggior numero di modi possibili e 
+verificando che esso si comporti secondo le aspettative.
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccccccc}
+			\textbf{Problema \#} & \textbf{Rilevato da} & \textbf{in data} & 
+			\textbf{Caso d'uso} & \textbf{Descrizione del 
+				problema}                                                       
+				        
+				                                         &
+			\textbf{Gravità} & \textbf{Risolto in data} \\
+			1                   & Soggetto 1           & 20/02/2020        & 
+			Upload 
+			video        & \begin{tabular}[c]{@{}c@{}}Il sistema, se avviato 
+			con 
+				Google \\ Chrome, non permette l'inserimento \\ di video in 
+				real 
+				time\end{tabular} & 3                & -                        
+				\\
+			1                   & Soggetto 2           & 21/02/2020       & 
+			Upload 
+			video        & \begin{tabular}[c]{@{}c@{}}Il sistema, se avviato 
+			con 
+				Google \\ Chrome, non permette l'inserimento \\ di video in 
+				real 
+				time\end{tabular} & 3                & -                        
+				\\
+			2                   & Soggetto 4           & 21/02/2020       & 
+			View 
+			report         & \begin{tabular}[c]{@{}c@{}}Ogni tanto, anche se 
+			non ci 
+				sono \\ video, nel report si creano grafici\\ valorizzati a 
+				0\end{tabular}        & 1                & 
+				-                       
+		\end{tabular}	
+	}
+\end{table}
+
+Gravità:
+	\begin{enumerate}
+		\item problema molto lieve; può essere risolto dopo la pubblicazione 
+		del sito
+		\item problema lieve, da risolvere prima della pubblicazione del sito
+		\item problema grave ma bypassabile; non pregiudica l'uso del sito
+		\item problema bloccante, impedisce l'uso della funzione
+	\end{enumerate}
+
+\paragraph{Note} Il problema \textbf{\#1} è dovuto a un bug 
+(\url{https://bugs.chromium.org/p/chromium/issues/detail?id=642012}) presente 
+nel 
+browser Chromium, su cui Google Chrome è basato, che non memorizza i metadati 
+dei video WebM, rendendoli quindi non riproducibili. Come 
+già riportato nei requisiti di usabilità, per il funzionamento corretto del 
+sistema, è consigliabile l'utilizzo di Firefox.

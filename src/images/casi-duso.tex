@@ -1,0 +1,73 @@
+% Copyright (c)  2019  FSC.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+
+\begin{tikzpicture} 
+    \begin{umlsystem}[x=6, y=20]{Emotionally} 
+        % Define uses case of the GUEST
+        \umlusecase[x=0,y=-2, name=Registration]{Registration} 
+              
+        % Define uses case of the USER
+        \umlusecase[x=0,y=-4, name=Login]{Login}
+        \umlusecase[x=0,y=-5, name=Logout]{Logout}
+        
+        \umlusecase[x=0,y=-6, name=ProjectCreation]{Create project}
+        \umlusecase[x=8, y=-2, name=ProjectEditing]{Edit project}
+        \umlusecase[x=8, y=-3, name=ProjectRemoval]{Remove project}
+        \umlusecase[x=0,y=-7, name=ProjectView]{View project}
+        
+        \umlusecase[x=8, y=-4, name=VideoUpload]{Upload video}
+        \umlusecase[x=8, y=-5, name=VideoEditing]{Edit video}
+        \umlusecase[x=8, y=-6, name=VideoRemoval]{Remove video}
+        \umlusecase[x=8, y=-7, name=ViewVideo]{View video}
+        
+        \umlusecase[x=8, y=-8, name=SharingProject]{Share project}
+        
+        \umlusecase[y=-10, name=ReportView]{View report}
+        \umlusecase[x=8, y=-9.5, name=VideoReportView]{View report of a video}
+        \umlusecase[x=8, y=-10.5, name=ProjectReportView]{View report of a project}
+        
+        \umlusecase[x=8, y=-11.5, name=ReportDownload]{Download report}
+        
+        \umlusecase[y=-9, name=UserDataUpdate]{Update user data}
+     \end{umlsystem} 
+    
+    % Define actor
+    \umlactor[x=1, y=17.5]{Guest}
+    \umlactor[x=1, y=14.5]{User}
+    \umlactor[y=10.5]{Designer}
+    \umlactor[x=2, y=10.5]{Analyst}
+    
+    % Define generalizzation between actor
+    \umlinherit{User}{Guest}
+    \umlinherit[geometry=|-|]{Designer}{User}
+    \umlinherit[geometry=|-|]{Analyst}{User}
+    
+    % Define associations between actors and use cases
+    \umlassoc{Guest}{Registration} 
+    \umlassoc{User}{Login} 
+    \umlassoc{User}{Logout} 
+    \umlassoc{User}{ProjectCreation}
+    \umlassoc{User}{ProjectView}
+    \umlassoc{User}{ReportView}
+    \umlassoc{User}{UserDataUpdate}
+
+    
+    %Define extensions between use cases
+    \umlHVHextend{ProjectEditing}{ProjectView}
+    \umlHVHextend{ProjectRemoval}{ProjectView}
+    \umlHVHextend{SharingProject}{ProjectView}
+    \umlHVHextend{VideoUpload}{ProjectView}
+    \umlHVHextend{VideoEditing}{ProjectView}
+    \umlHVHextend{VideoRemoval}{ProjectView}
+    \umlHVHextend{ViewVideo}{ProjectView}
+    \umlHVextend{ReportDownload}{ReportView}
+    
+    % Define generalizzation between use cases
+    \umlinherit[geometry=-|-]{VideoReportView}{ReportView}
+    \umlinherit[geometry=-|-]{ProjectReportView}{ReportView}
+\end{tikzpicture}

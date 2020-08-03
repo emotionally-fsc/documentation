@@ -1,0 +1,410 @@
+== Prerequisiti per l'uso del sistema
+
+Di seguito, si riportano le istruzioni sull'utilizzo del sistema. Saranno
+riportate alcuni scenari d'uso tipici con istruzioni passo passo al fine di
+permettere un semplice raggiungimento degli obiettivi prefissati.
+
+=== Requisiti hardware
+
+Per poter utilizzare il sistema è necessario disporre di una connessione a
+internet (a meno che il sistema non sia installato sulla propria macchina, come
+descritto nel <<installazione>>). Non è necessario alcun tipo di hardware
+aggiuntivo al fine di utilizzare il sistema. Tuttavia, per poter usufruire delle
+funzionalità di analisi di video registrati in tempo reale è necessaria una
+webcam (anche esterna) per registrare i video e un microfono (opzionale) per
+registrare l'audio.
+
+=== Requisiti software
+
+Per utilizzare il sistema non è necessario installare software aggiuntivo ne
+compiere alcuna operazione particolare (salvo l'eventuale installazione qualora
+si decidesse di utilizzare una versione non on-line del sistema, come descritto
+nel <<installazione>>) in quanto _Emotionally_ è un sistema basato sul web.
+Questo significa che per poterlo utilizzare è semplicemente necessario un
+browser e un collegamento a internet (qualora il sito non fosse installato).
+
+È tuttavia fortemente consigliato l'utilizzo del *browser _Firefox_*
+(https://www.mozilla.org/firefox/) a causa di alcuni problemi legati al browser
+Chrome e Chromium (e derivati).
+
+WARNING: I problemi riscontrati nei browser _Chromium-based_ (Chromium, Chrome,
+ecc.) non comportano una inutilizzabilità del sistema, ma potrebbero essere
+fonti di errori e comportamenti anomali che non è possibile prevedere. Per tale
+motivo, per godere di un'esperienza d'uso che sia la migliore possibile, è
+fortemente consigliato l'utilizzo di _Firefox_.
+
+== Utilizzo del sistema
+
+Di seguito si riporta una guida all'utilizzo del sistema. È inoltre disponibile
+un breve video che mostra come utilizzare il sistema, mostrandone tre
+funzionalità tipicamente utilizzate (login/registrazione, creazione di un
+progetto e analisi di un video). Tale video è disponibile al seguente link.
+
+[.text-center]
+http://bit.ly/EmotionallyGuida
+
+=== Registrazione e verifica mail
+
+Andando all'indirizzo http://localhost si entrerà nella _Landing Page_.Da qui si
+può effettuare la registrazione cliccando sul pulsante _Login_, presente in alto
+a destra. 
+
+image::../screenshots/landing.jpg[alt=Landing Page]
+
+Una volta aperta la pagina di login, sarà sufficiente cliccare sul link _Sign
+Up_.
+
+image::../screenshots/login1.jpg[alt=Login]
+
+Si aprirà la pagina di registrazione dove sarà necessario inserire i seguenti
+dati:
+
+* Nome
+* Cognome
+* Indirizzo E-Mail (necessario per il login al sistema)
+* Password
+* Password di conferma
+
+image::../screenshots/signup.jpg[alt=Login]
+
+Successivamente al click del bottone _Sign Up_ verrà inviata una mail
+all'indirizzo inserito con un link per verificarla.
+
+image::../screenshots/verification.jpg[alt=Verify Email]
+
+Sarà necessario accedere alla casella di posta e cliccare sul bottone _Verify
+Mail Address_ presente all'interno della mail ricevuta dal sistema.
+
+image::../screenshots/email.jpg[alt=Email]
+
+Cliccato il bottone, si verrà indirizzati alla dashboard del sistema.
+
+image::../screenshots/dashboard.jpg[alt=Dashoard]
+
+=== Login 
+
+Per effettuare il _Login_ è necessario visitare la _Landing Page_ e,
+successivamente, cliccare sul bottone _Log In_, presente in alto a destra.
+
+image::../screenshots/landing.jpg[alt=Landing Page]
+
+Si aprirà la pagina di _Log In_ nella quale sarà necessario inserire la mail:
+
+image::../screenshots/login1.jpg[alt=Login]
+
+Dopo aver inserito la mail, premendo il pulsante invio (o cliccando sulla
+freccia), sarà possibile inserire la password:
+
+image::../screenshots/login2.jpg[alt=Login]
+
+Il toggle _Remember me_ permette di non perdere la sessione alla chiusura il
+browser. Cliccando sul bottone _Login_, se i dati inseriti sono corretti, si
+potrà accedere al sistema.
+
+IMPORTANT: Se la mail non è stata verificata, si entrerà nella pagina di
+verifica mail (illustrata nella sezione <<Registrazione e verifica mail>>) e non
+sarà possibile accedere al sistema.
+
+=== Dashboard
+
+Una volta completata la fase di <<Login>>, l'utente verrà reindirizzato nella
+_Dashboard_ del sistema, contente l'elenco dei progetti dell'utente.
+
+==== Sidebar
+
+Sarà possibile inoltre interfacciarsi alla siderbar presente sulla sinistra,
+contenente le sezioni _Progetti_, _Lingua_, e _Profilo_.
+
+image::../screenshots/dash+lingua.jpg[alt=lingua]
+
+Dalla sezione _Lingua_ l'utente sarà in grado di cambiare la lingua del sistema
+in Italiano o Inglese a seconda delle sue preferenze.
+
+Dal pulsante di _Logout_, invece,  si può effettuare la disconnessione dal sito.
+
+==== Parte destra
+
+La parte destra del sistema rappresenta la principale zona di interazione con
+l'utente.
+
+La Dashboard presenta un bottone _Add_ che permette, cliccando sul link _Add
+project_, di creare un progetto. I passaggi sono illustrati nella sezione
+<<Creazione di un progetto>>.
+
+==== Creazione di un progetto
+
+Per creare un progetto basta cliccare il pulsante _Add_, in alto a destra, e
+selezionare il link _Add project_.
+
+image::../screenshots/dashboard+add.jpg[alt=Aggiungi]
+
+Il sistema richiederà il titolo del progetto che si intende creare.
+
+image::../screenshots/creaprogetto1.jpg[alt=Crea progetto]
+
+CLiccando poi su _Create_ il progetto verrà creato.
+
+image::../screenshots/creaprogetto2.jpg[alt=Progetto creato]
+
+Un messaggio di conferma verrà mostrato ad operazione completata. In caso di
+errore l'utente verrà notificato di un un problema durante l'operazione.
+
+Una volta terminata l'operazione, il nuovo progetto apparirà nella _Dashboard_.
+
+image::../screenshots/dash+progetto.jpg[alt= Dashboard con progetto]
+
+Sarà possibile _rinominare_, _eliminare_, o _gestire i permessi_ del progetto
+appena creato cliccando sul pulsante _Altre Opzioni_ (ovvero tre pallini
+verticali sulla destra della riga).
+
+image::../screenshots/dash+permessi.jpg[alt=Altre opzioni]
+
+Inoltre, sarà possibile visualizzare l'intero <<Report del progetto>>
+semplicemente cliccando sull'apposito tasto _Report_.
+
+==== Permessi
+
+La sezione _Permessi_ permette di scegliere quali utenti possono effettuare
+operazioni di lettura, modifica, aggiunta o rimozione in un determinato
+progetto. 
+
+image::../screenshots/permessi.jpg[alt=Permessi]
+
+Basterà inserire l'email dell'utente di cui si vogliono modificare i permessi e
+selezionare le operazioni che potrà effettuare.
+
+image::../screenshots/permessiAggiunti.jpg[alt=Permessi aggiunti]
+
+Se la mail inserita è presente nel sistema, l'utente apparirà nella lista dei
+permessi presente nella medesima pagina.
+
+==== Rinominare un progetto
+
+Il pulsante _Rename_ permette di rinominare un progetto già esistente. Una volta
+selezionata l'opzione, il sistema chiederà all'utente di inserire un nuovo nome
+per il progetto selezionato.
+
+image::../screenshots/rinomina.jpg[alt=Rinomina]
+
+Cliccando il pulsante _Rename_, il sistema notificherà l'utente dell'esito
+dell'operazione.
+
+image::../screenshots/rinomina2.jpg[alt=Rinominazione completata]
+
+==== Spostare un progetto o un video
+
+Il pulsante _Move_, accessibile sia cliccando sulle opzioni di un video sia su
+quelle di un progetto, permette di spostare uno dei due in un altro progetto di
+proprietà dell'utente*.
+
+image::../screenshots/sposta.jpg[alt=Sposta progetto] 
+
+Selezionata l'opzione, verrà mostrato l'albero dei progetti creati dall'utente,
+che potrà così scegliere in quale inserire il video/progetto da spostare.
+
+Un messaggio notificherà l'utente dell'esito dell'operazione.
+
+image::../screenshots/sposta1.jpg[alt= Operazione di spostamento completata]
+
+TIP: È possibile spostare il video anche in progetti che sono di proprietà di
+altri utenti, a patto di avere i permessi di aggiunta.
+
+==== Eliminare un progetto o un video
+
+Tramite il pulsante _Delete_ è possibile eliminare un video o un progetto di
+proprietà dell'utente.
+
+Una volta cliccato il pulsante, verrà richiesta un'ulteriore conferma
+dell'operazione per scongiurare click involontari.
+
+WARNING: L'eliminazione di un progetto comporterà anche l'eliminazione di tutti
+i sottoprogetti e i video al suo interno.
+
+image::../screenshots/delete.jpg[alt=Elimina progetto]
+
+Se l'utente effettua il click sul bottone _Yes_, un messaggio notificherà
+l'utente dell'esito dell'operazione.
+
+image::../screenshots/delete1.jpg[alt= Elminazione effettuata]
+
+=== Navigazione all'interno di un progetto
+
+Per navigare all'interno di un progetto è necessario sceglierlo dalla tabella
+prensente nella _Dashboard_:
+
+image::../screenshots/dash+progetto.jpg[alt= Dashboard con progetto]
+
+Cliccando sul progetto desiderato, si entrerà nella pagina di navigazione dello
+stesso. Appariranno i sottoprogetti e i video che esso contiene, come se fosse
+una cartella del sistema operativo.
+
+image::../screenshots/progetto+permessi.jpg[alt= Progetto con elementi]
+
+È possibile, durante la navigazione, effettuare le operazioni di:
+
+* Creazione di un sottoprogetto
+* Caricamento di un video
+* Registrazione di un video in tempo reale
+* Gestione dei permessi di un sottoprogetto
+* Visualizzazione del report di un sottoprogetto
+* Visualizzazione di un report del video
+
+Qui di seguito verranno illustrate tutte le operazioni sopracitate.
+
+==== Creazione di un sottoprogetto
+
+Per creare un sottoprogetto si può fare riferimento al paragrafo <<Creazione di un progetto>>.
+
+==== Caricamento di un video
+
+Per caricare un video all'interno di un progetto o sottoprogetto è sufficiente
+cliccare il pulsante _Add_, presente in alto a destra.
+
+image::../screenshots/progetto.jpg[alt=Progetto vuoto]
+
+Successivamente è necessario cliccare il link _Upload video_.
+
+image::../screenshots/caricavideo1.jpg[alt=Caricamento video]
+
+Cliccando il campo _Choose file_ si aprirà l'esplora risorse del sistema
+operativo da cui si potrà selezionare uno o più video. 
+
+Successivamente, apparirà un selettore da cui si potrà selezionare la frequenza
+di analisi per secondo.
+
+image::../screenshots/caricavideo2.jpg[alt=Caricamento video 2]
+
+Per finalizzare il caricamento bisognerà cliccare sul pulsante _Upload_.
+
+image::../screenshots/caricavideo3.jpg[alt=Caricamento video 3]
+
+A caricamento effettuato apparirà un alert che notificherà l'utente sull'esito
+dell'operazione. Successivamente si potranno caricare altri video o tornare alla
+navigazione.
+
+==== Registrazione di un video in tempo reale
+
+Per registrare un video in tempo reale e aggiungerlo all'interno di un progetto
+o sottoprogetto è sufficiente cliccare il pulsante _Add_, presente in alto a
+destra.
+
+image::../screenshots/progetto.jpg[alt=Progetto vuoto]
+
+Successivamente è necessario cliccare il link _Real time video_.
+
+image::../screenshots/realtime.jpg[alt=Realtime video 1]
+
+Cliccando sul pulsante al centro del player video il sistema richiederà i
+permessi per utilizzare la webcam e il microfono al browser. Sarà quindi
+necessario consentirne i permessi per il corretto funzionamento.
+
+Apparirà, quindi, la visualizzazione in tempo reale della webcam e sarà
+possibile procedere alla registrazione del video cliccando il "`pallino bianco`"
+(o pulsante di _Rec_) in basso a sinistra nel player.
+
+image::../screenshots/realtime2.jpg[alt=Realtime video 2]
+
+Si potrà poi fermare la registrazione cliccando sul "`quadrato`" (o pulsante di
+_stop_), che apparirà dopo aver cliccato il pulsante di _Rec_. Successivamente,
+cliccando sul pulsante _Next_ in basso a destra, sarà possibile assegnare un
+titolo alla registrazione e seglierne le analisi per secondo.
+
+image::../screenshots/realtime3.jpg[alt=Realtime video 3]
+
+Cliccando poi su _Upload_ si porcederà al caricamento del video e alla
+successiva analisi.
+
+image::../screenshots/realtime4.jpg[alt=Realtime video 4]
+
+Terminata la procedura l'utente verrà notificato sull'esito della stessa e sarà
+possibile tornare alla navigazione.
+
+==== Gestione dei permessi di un sottoprogetto
+
+All'interno della navigazione è possibile accedere ai permessi di un
+sottoprogetto per aggiungerli, modificarli o rimuoverli.
+
+Sarà sufficiente cliccare sul pulsante _Menù_ del sottoprogetto desiderato (i
+tre puntini verticali in alto a destra all'interno del "`quadrato`") e,
+successivamente, cliccare sul link _Permissions_.
+
+image::../screenshots/progetto+permessi.jpg[alt=Permessi sottoprogetto]
+
+Si aprirà la pagina dei permessi, già illustrata nella sezione <<Permessi>>.
+
+NOTE: I permessi possono essere assegnati ai soli progetti o sottoprogetti, non
+è possibile assegnare permessi ai video. Tuttavia, i video "`ereditano`" i
+permessi del progetto in cui si trovano.
+
+==== Visualizzazione del report di un sottoprogetto
+
+Una volta entrati in un sottoprogetto, è possibile visualizzare il <<Report di
+un video>>, cliccandovi sopra. In alternativa, attraverso il bottone _Report_,
+presente in alto a sinistra durante la navigazione all'interno di un progetto, è
+possibile visualizzare il <<Report di un progetto>>.
+
+image::../screenshots/sottoprogetto.jpg[alt=Sottoprogetto]
+
+=== Report di un progetto
+
+Attraverso il pulsante _Report_ è possibile visionare l'intero report di un
+progetto.
+
+image::../screenshots/ReportProgetto.jpg[alt=Report progetto]
+
+È possibile visionare l'analisi delle emozioni media dei video all'interno del
+progetto sottoforma di diversi grafici.
+ 
+Lo _Spider Chart_ e il _Bar Chart_ offrono una visualizzazione più dettagliata
+rispetto all'emozione media (rappresentata tramite un'_Emoji_). Essi consentono
+di conoscere i parametri medi delle emozioni.
+
+==== Scaricare i dati di un report
+
+Attraversi il pulsante _Download_ è possibile scaricare il report del progetto
+in uno dei seguenti formati:
+
+* _PDF_
+* _HTML_
+* _JSON_
+* _EXCEL_
+* _PPTX_ (Presentazione Power Point)
+ 
+Di seguito si mostra un esempio di visualizzazione in formato _HTML_ (analoga
+alla visualizzazione _PDF_).
+
+image::../screenshots/reportHtml.jpg[alt=Report Html]
+
+=== Report di un video
+
+Cliccando su di un video verrà visualizzato il suo report. È presente un player
+per riprodurre il video ed uno slider per effettuare l'analisi di determinati
+intervalli del video.
+
+image::../screenshots/reportvideocompleto.jpg[alt=Report video]
+
+Rispetto ai <<Report di un progetto>>, il report di un video mostra anche il
+_Line Chart_ che permette di visualizzare il valore preciso di una determinata
+emozione (da 0 a 100) in una delle rilevazioni effettuate dal sistema di analisi
+(variabile in base alle analisi per secondo e alla lunghezza del video).
+
+==== Scaricare i dati del report di un video
+
+È possibile scaricare i dati di un report video in modalità identiche a quelle 
+viste per i progetti (dettagliati nella sezione <<Scaricare i dati di un report>>).
+
+image::../screenshots/scaricareReportVideo.jpg[alt= Download report video]
+
+=== Profilo
+
+Dalla sezione _Profilo_ è possibile cambiare i propri dati, quali: _Nome_,
+_Cognome_ e _Password_.
+
+image::../screenshots/profilo.jpg[alt=Profilo]
+
+Attraverso il pulsante _Reset_ è possibile ripristinare le eventuali modifiche
+effettuate e non salvate, mentre attraverso il tasto _Save_ verranno salvati i
+cambiamenti effettuati. Un messaggio notificherà l'utente dell'esito
+dell'operazione.
+
+image::../screenshots/profilo2.jpg[alt=Profilo cambiato]

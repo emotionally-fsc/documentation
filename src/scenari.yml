@@ -1,0 +1,434 @@
+# - id: 1
+#   usecase: "Test analysis"
+#   description: >-
+#     Breve descrizione del caso d'uso.
+#   actors:
+#     - "Attore 1"
+#     - "Attore 2"
+#   preconditions:
+#     - "Precondizione 1"
+#     - "Precondizione 2"
+#   actions:
+#     - action: "Action 1"
+#       subactions:
+#       - action: "Sub action"
+#       - action: "Sub action"
+#     - action: "Action 2"
+#     - action: "Action 3"
+#   postconditions:
+#     - "Postcondizione 1"
+#     - "Postcondizione 2"
+#   alternative:
+#     - "Alternativa 1"
+#     - "Alternativa 2"
+
+- id: 1
+  usecase: "Registration"
+  description: >-
+    L'utente visitatore si registra alla piattaforma Emotionally.
+  actors:
+    - "Guest"
+  preconditions:
+    - "L'utente non deve essere già registrato alla piattaforma"
+  actions:
+    - action: "Il guest chiede al sistema di potersi registrare alla piattaforma"
+    - action: "Il sistema permette la registrazione chiedendo informazioni utili per la registrazione"
+      subactions:
+        - action: "Fintantochè l'utente non inserisce una corretta email"
+        - action: "Il sistema chiede l'email"
+        - action: "L'utente inserisce l'email"
+    - action: "Fintantochè l'utente non inserisce una password valida"
+      subactions:
+        - action: "Il sistema chiede la password"
+        - action: "L'utente inserisce la password"
+    - action: "Il sistema chiede il nome dell'utente"
+      subactions:
+        - action: "L'utente inserisce il nome"
+    - action: "Il sistema chiede il cognome dell'utente"
+      subactions:
+        - action: "L'utente inserisce il cognome"
+    - action: "Il sistema chiede il sesso dell'utente"
+      subactions:
+        - action: "L'utente inserisce il sesso"
+  postconditions:
+    - "L'utente è registrato alla piattaforma"
+  alternative:
+    - "Uno scenario alternativo viene attivato al punto 2: il sistema informa l'utente che l'email inserita non è valida o corretta"
+    - "Uno scenario alternativo viene attivato al punto 3: il sistema informa l'utente che la password inserita non è valida"
+
+- id: 3
+  usecase: "Login"
+  description: >-
+    L'utente vuole effettuare l'accesso alla piattaforma Emotionally
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver già effettuato la registrazione"
+  actions:
+    - action: "L'utente chiede al sistema di poter effettuare il login"
+    - action: "Il sistema chiede all'utente di inserire le informazioni necessarie per effettuare l'accesso"
+    - action: "Fintantochè l'utente non inserisce un'email valida"
+      subactions:
+        - action: "Il sistema chiede all'utente di inserire l'email"
+        - action: "L'utente inserisce l'email"
+    - action: "Fintantochè l'utente non inserisce una password valida"
+      subactions:
+        - action: "Il sistema chiede all'utente di inserire la password"
+        - action: "L'utente inserisce la password"
+    - action: "Il sistema fa accedere l'utente alla piattaforma"
+  postconditions:
+    - "L'utente ha effettuato il login"
+  alternative:
+    - "Uno scenario alternativo viene innescato al punto 3: il sistema avvisa l'utente che l'email inserita non è valida."
+    - "Uno scenario alternativo viene innescato al punto 4: il sistema avvisa l'utente che la password inserita non è valida."
+
+- id: 4
+  usecase: "Logout"
+  description: >-
+    L'utente vuole uscire dalla piattaforma Emotionally.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere già loggato alla piattaforma"
+  actions:
+    - action: "L'utente chiede al sistema di porter effettuare il logout"
+    - action: "Il sistema chiede all'utente la conferma di logout"
+    - action: "Se l'utente conferma"
+      subactions:
+        - action: "Il sistema permetterà l'uscita dalla piattaforma"
+    - action: "Altrimenti"
+      subactions:
+        - action: "Il sistema fermerà il processo di logout"
+  postconditions:
+    - "L'utente ha effettuato il logout"
+  alternative:
+    - "Nessuno"
+
+- id: 5
+  usecase: "Create project"
+  description: >-
+    L'utente vuole creare un nuovo progetto.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato alla piattaforma"
+  actions:
+    - action: "L'utente chiede al sistema di poter creare un nuovo progetto"
+    - action: "Il sistema chiede delle informazioni relative al nuovo progetto"
+    - action: "Fintantochè l'utente non inserisce un nome di progetto valido"
+      subactions:
+        - action: "Il sistema chiede all'utente di inserire il nome di progetto"
+        - action: "L'utente inserisce il nome di progetto"
+    - action: "Fintantochè l'utente non inserisce una cartella padre valido"
+      subactions:
+        - action: "Il sistema chiede all'utente di inserire la cartella padre del progetto"
+        - action: "L'utente inserisce la cartella padre del progetto"
+    - action: "Il sistema effettua la creazione del nuovo progetto"
+  postconditions:
+    - "L'utente ha creato un nuovo progetto"
+  alternative:
+    - "Uno scenario alternativo viene innescato al punto 3: il sistema avvisa l'utente di aver inserito un nome di progetto non valido."
+    - "Uno scenario alternativo viene innescato al punto 4: Il sistema avvisa l'utente di aver inserito una cartella padre errate"
+
+- id: 6
+  usecase: "View project"
+  description: >-
+    L'utente vuole visualizzare uno dei suoi progetti.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver effettuato la procedura di login"
+    - "L'utente deve aver già creato il progetto che vuole visualizzare"
+  actions:
+    - action: "L'utente chiede al sistema di poter visualizzare un suo progetto"
+    - action: "Il sistema permette la visualizzazione del progetto scelto all'utente richiedente"
+  postconditions:
+    - "L'utente visualizza il progetto"
+  alternative:
+    - "Nessuno"
+
+- id: 7
+  usecase: "Edit project"
+  description: >-
+    L'utente vuole modificare un progetto da lui scelto.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato alla piattaforma"
+    - "Il progetto scelto dall'utente deve essere già stato creato"
+  actions:
+    - action: "L'utente chiede al sistema di porter modificare il progetto"
+    - action: "Il sistema permette all'utente di modificare il progetto richiesto"
+    - action: "Se l'utente chiede di rinominare il progetto"
+      subactions:
+        - action: "Fintantochè il nuovo nome del progetto non è valido"
+          subactions:
+            - action: "Il sistema chiede all'utente di inserire il nuovo nome del progetto"
+            - action: "L'utente inserisce il nuovo nome del progetto"
+    - action: "Se l'utente chiede di spostare un video"
+      subactions:
+        - action: "Il sistema chiede all'utente in quale progetto vuole spostarlo"
+        - action: "Se il video è già presente nel progetto in cui si intende spostarlo"
+          subactions:
+            - action: "Il sistema chiede all'utente conferma per lo spostamento del video"
+        - action: "Altrimenti"
+          subsections:
+            -action: "Il sistema effettua lo spostamento del video nel progetto scelto dall'utente"
+  postconditions:
+    - "Il progetto scelto è stato modificato"
+  alternative:
+    - "Uno scenario alternativo viene innescato al punto 4.2: Il sistema chiede all'utente se vuole rinominare il video, se vuole sovrascrivere il video con lo stesso nome di quello che si vuole spostare o se si vuole annullare l'operazione"
+
+- id: 8
+  usecase: "Remove project"
+  description: >-
+    L'utente vuole rimuovere un suo progetto dalla piattaforma.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver effettuato la procedura di login"
+    - "Il progetto da eliminare deve essere stato già creato dall'utente"
+  actions:
+    - action: "L'utente chiede al sistema di poter rimuovere il progetto scelto"
+    - action: "Il sistema chiede all'utente conferma dell'eliminazione del progetto scelto"
+    - action: "Se l'utente confema"
+      subactions:
+        - action: "Il sistema provvede all'eliminazione del progetto scelto"
+    - action: "Altrimenti"
+      subactions:
+        - action: "Il sistema annullerà l'operazione"
+  postconditions:
+    - "Il progetto scelto dall'utente è stato eliminato"
+  alternative:
+    - "Nessuno"
+
+- id: 9
+  usecase: "Upload video"
+  description: >-
+    L'utente vuole inserire un nuovo video.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato nel sistema"
+    - "Il progetto in cui inserire il video deve essere stato già creato"
+    - "Il video non deve essere stato già inserito nel progetto in cui lo vuole caricare"
+  actions:
+    - action: "L'utente richiede al sistema di poter inserire un nuovo video"
+    - action: "Finantochè l'utente non confermi o non annulli l'operazione"
+      subactions:
+        - action: "Il sistema chiede all'utente di inserire il video"
+        - action: "L'utente inserisce il video che vuole caricare"
+        - action: "Se l'utente vuole modificare il nome del video da caricare"
+          subactions:
+            - action: "Il sistema permette all'utente di modificare il nome del video"
+            - action: "L'utente inserisce il nome del video"
+        - action: "Altrimenti"
+          subactions:
+            - action: "Il sistema lascerà il nome del video al suo stesso inserimento"
+  postconditions:
+    - "L'utente ha inserito un nuovo video"
+  alternative:
+    - "Nessuno"
+
+- id: 10
+  usecase: "Edit video"
+  description: >-
+    L'utente vuole modificare un video da lui scelto.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver effettuato la procedura di login"
+    - "Il video deve essere stato già caricato"
+  actions:
+    - action: "L'utente chiede al sistema di poter effettuare modifiche al video selezionato"
+    - action: "Il sistema permette all'utente di modificare le informazioni inerenti al video"
+    - action: "Fintantochè l'utente non salvi le modifiche o annulli l'operazione"
+      subactions:
+        - action: "Se l'utente vuole modificare il nome del video selezionato"
+          subactions:
+            - action: "Fintantochè l'utente non inserisce un nome del video valido"
+              subactions:
+                - action: "Il sistema chiede all'utente il nuovo nome del video"
+                - action: "L'utente inserisce il nome del video"
+        - action: "Se l'utente vuole modificare l'intervallo di analisi del video"
+          subactions:
+            - action: "Il sistema chiede all'utente di selezionare un intervallo di analisi"
+            - action: "L'utente inserisce l'intervallo di analisi del video richiesto"
+  postconditions:
+    - "L'utente ha modificato il video selezionato"
+  alternative:
+    - "Uno scenario alternativo si innesca nel punto 3.1.1: il sistema avverte l'utente che il nome inserito non è valido"
+
+- id: 11
+  usecase: "Remove video"
+  description: >-
+    L'utente vuole rimuove un video dalla piattaforma Emotionally.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver effettuato il login"
+    - "Il video deve essere stato già caricato sulla piattaforma"
+  actions:
+    - action: "L'utente chiede al sistema di rimuovere un video da lui scelto"
+    - action: "Il sistema chiede conferma di eliminazione all'utente"
+    - action: "Se l'utente conferma"
+      subactions:
+        - action: "Il sistema provvedere a rimuovere il video selezionato dalla piattaforma"
+    - action: "Altrimenti"
+      subactions:
+        - action: "Il sistema annulla l'operazione"
+  postconditions:
+    - "Il video richiesto dall'utente è stato rimosso"
+  alternative:
+    - "Nessuno"
+
+- id: 12
+  usecase: "View video"
+  description: >-
+    L'utente vuole visionare un video da lui scelto.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato"
+    - "Il video deve essere già stato caricato nella piattaforma"
+  actions:
+    - action: "L'utente chiede al sistema di poter visionare un video"
+    - action: "Il sistema permette la visione del video scelto dall'utente"
+  postconditions:
+    - "L'utente visualizza il video selezionato"
+  alternative:
+    - "Nessuno"
+
+- id: 13
+  usecase: "Share project"
+  description: >-
+    L'utente vuole condividere un proprio progetto con un altro o con altri utenti.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente che condivide il suo progetto deve aver effettuato la procedura di login"
+    - "Il progetto deve essere stato già creato"
+    - "L'utente o gli utenti con cui codividere il progetto devono essere registrati alla piattaforma Emotionally"
+  actions:
+    - action: "L'utente richiede al sistema di poter condividere il progetto selezionato con uno o più utenti"
+    - action: "Il sistema richiede all'utente alcune informazioni riguardanti gli utenti da ``invitare''"
+    - action: "Se l'utente non annulla l'operazione di condivisione"
+      subactions:
+        - action: "Il sistema richiede l'e-mail degli utenti a cui condividere il progetto"
+        - action: "L'utente inserisce l'email degli utenti"
+        - action: "Il sistema richiede all'utente che condivide il progetto di inserire i permessi che essi potranno avere sul progetto"
+        - action: "L'utente seleziona i permessi"
+        - action: "Se l'utente conferma la condivisione"
+          subactions:
+            - action: "Il sistema permette la condivisione del progetto scelto"
+    - action: "Altrimenti"
+      subactions:
+        - action: "Il sistema annulla l'operazione di condivisione"
+  postconditions:
+    - "L'utente ha condiviso il proprio progetto con altri"
+  alternative:
+    - "Nessuno"
+
+- id: 15
+  usecase: "Update user data"
+  description: >-
+    L'utente vuole aggiornare i propri dati inseriti in fase di registrazione.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve aver effettuato già la procedura di login"
+  actions:
+    - action: "L'utente chiede al sistema di poter modificare i propri dati"
+    - action: "Il sistema permette la modifica dei dati dell'utente richiedente"
+    - action: "Fintantochè l'utente non salvi le informazioni aggiornate o non annulli l'operazione di modifica"
+      subactions:
+        - action: "Se l'utente decide di modificare il nome"
+          subactions:
+            - action: "L'utente modifica il nome"
+        - action: "Altrimenti"
+          subactions:
+            - action: "Il nome non verrà variato da quello già presente"
+        - action: "Se l'utente decide di modificare il cognome"
+          subactions:
+            - action: "L'utente modifica il cognome"
+        - action: "Altrimenti"
+          subactions:
+            - action: "Il cognome non verrà variato da quello già presente"
+        - action: "Se l'utente vuole modificare il sesso"
+          subactions:
+            - action: "L'utente modifica il sesso"
+        - action: "Altrimenti"
+          subactions:
+            - action: "Il sesso non verrà variato da quello già presente"
+    - action: "Se l'utente chiede di modificare la propria password"
+      subactions:
+        - action: "Fintantochè l'utente non inserisce la vecchia password valida"
+          subsections:
+            - action: "Il sistema chiede all'utente la password vecchia"
+            - action: "L'utente inserisce la vecchia password"
+        - action: "Fintantochè l'utente non inserisce una nuova password valida"
+          subsections:
+            - action: "Il sistema chiede all'utente di inserire la nuova password"
+            - action: "L'utente inserisce la nuova password"
+        - action: "Fintantochè l'utente non re-inserisce correttamente la nuova password"
+          subactions:
+            - action: "Il sistema chiede all'utente di re-inserire la nuova password"
+            - action: "L'utente re-inserisce la nuova password"
+        - action: "Il sistema provvederà alla modifica della password"
+    - action: "Altrimenti"
+      subsections:
+        - action: "Se l'utente decide di annullare l'operazioni di modifica"
+          subactions:
+            - action: "Il sistema annullerà l'operazione di modifica"
+  postconditions:
+    - "I dati richiesti dall'utente sono stati modificati."
+  alternative:
+    - "Uno scenario alternativo viene innescato nel punto 4.1: il sistema avvisa l'utente che la vecchia password non è stata inserita correttamente."
+    - "Uno scenario alternativo viene innescato nel punto 4.2: il sistema avvisa l'utente che la nuova password inserita non è valida."
+    - "Uno scenario alternativo viene innescato nel punto 4.3: il sistema avvisa l'utente che la nuova password non è stata re-inserita correttamente."
+
+- id: 16
+  usecase: "View report"
+  description: >-
+    L'utente vuole visualizzare un report.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato"
+    - "Il progetto deve essere stato già creato"
+    - "Il video deve essere stato già caricato"
+    - "Il progetto deve contenere almeno un video"
+  actions:
+    - action: "L'utente chiede al sistema di poter visualizzare il report"
+    - action: "Il sistema permette la visualizzazione del report richiesto"
+  postconditions:
+    - "L'utente visualizza il report"
+  alternative:
+    - "Nessuno"
+
+- id: 19
+  usecase: "Download report"
+  description: >-
+    L'utente vuole scaricare il report di un suo progetto o di un suo video.
+  actors:
+    - "User"
+  preconditions:
+    - "L'utente deve essere loggato"
+    - "Il progetto deve essere stato già creato"
+    - "Il video deve essere stato già caricato"
+    - "Il progetto deve contenere almeno un video"
+  actions:
+    - action: "L'utente chiede al sistema di poter scaricare il report di un suo progetto o di un suo video"
+    - action: "Il sistema chiede all'utente in che formato vuole scaricare il pdf"
+      subsections:
+        - action: "L'utente informa il sistema del formato con cui vuole scaricare il report"
+        - action: "Se l'utente conferma"
+          subsections:
+            - action: "Il sistema provvederà ad avviare il download del report nel formato scelto dall'utente"
+        - action: "Altrimenti"
+          subsections:
+            - action: "Il sistema annullera l'operazione"
+  postconditions:
+    - "L'utente scarica il report richiesto."
+  alternative:
+    - "Nessuno"

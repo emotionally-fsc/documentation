@@ -1,0 +1,55 @@
+extends: basic
+
+page:
+  margin: [1.5cm, 2cm, 1.3cm, 1.5cm]
+  margin-inner: 2.5cm
+  margin-outer: 1.3cm
+
+base:
+  font_size_large: round($base_font_size * 1.25)
+  font_size_small: round($base_font_size * 0.85)
+  font_size_min: 4
+
+abstract_first_line_font_style: normal
+
+toc:
+  indent: 20
+  h1:
+    font-style: bold_italic
+    font-size: $base-font-size * 1.75
+  h2:
+    font-style: bold
+    font-size: $base-font-size * 1.5
+
+blockquote:
+  font-size: $base-font-size
+
+caption:
+  align: center
+
+header:
+  height: 1.3cm
+  padding: [15, 0, 0, 0]
+  line_height: 1
+  border-color: #dddddd
+  border-style: solid
+  border-width: $base-border-width
+  recto:
+    center:
+      content: '{document-title}'
+  verso:
+    center:
+      content: '{document-title}'
+ 
+footer:
+  height: 1.3cm
+  border-style: solid
+  border-color: #dddddd
+  border-width: $base-border-width
+  line_height: 1
+  recto:
+    right:
+      content: '{chapter-title} | *{page-number}*'
+  verso:
+    left:
+      content: '*{page-number}* | {chapter-title}'

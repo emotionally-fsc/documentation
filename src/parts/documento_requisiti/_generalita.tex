@@ -1,0 +1,143 @@
+% Copyright (c)  2019  FSC.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+
+\chapter{Generalità}\label{chap:generalita}
+
+Il sistema ``Emotionally'' ha l'obiettivo di semplificare la \textit{sentiment
+	analysis} agli analisti di tutti i campi. Il nome del sistema deriva dalla
+contrazione delle parole inglesi ``\textsc{emotional} ana\textsc{ly}sis''.
+
+\section{Il committente}\label{sec:il-committente}
+
+L'analisi delle emozioni è, a oggi, una componente importante per lo studio
+dell'impatto di prodotti e servizi sugli utenti finali. Avere a disposizione un
+\textit{tool} che ne permette la semi-automatizzazione è senz'altro di
+un'utilità indiscutibile.
+
+Il committente di questo progetto è il Professor Giuseppe Desolda
+dell'Università degli Studi di Bari, che ha come obiettivo quello di realizzare
+un sistema in grado di analizzare le emozioni degli utenti analizzando dei
+video. La richiesta del committente è quella di utilizzare le API del sistema
+Affectiva, uno dei migliori tool di questa tipologia.
+
+\section{Situazione attuale}\label{sec:situazione-attuale}
+
+Al momento non si ha una base su cui poter effettuare delle analisi. Per questo,
+seguendo il flusso di sviluppo scelto, si procederà all'analisi della
+concorrenza.
+
+\section{Obiettivi generali del nuovo sito}\label{sec:obiettivi-generali-del-nuovo-sito}
+\subsection{Obiettivi generali}\label{subsec:obiettivi-generali}
+
+Ad oggi sono pochi i sistemi che permettono di esaminare le emozioni attraverso
+flussi di video raccogliendo le analisi in formato statistico. I dati raccolti
+possono essere utili in vari campi applicativi (ad esempio Marketing, Produzione
+Multimediale, Usabilità, Accessibilità \textit{etc...}), in misura più o meno
+vasta.
+
+\subsection{Obiettivi specifici}\label{subsec:obiettivi-specifici}
+
+Gli obiettivi che il team si è posto di raggiungere per la prima
+\textit{release} del sistema sono:
+
+\begin{itemize}
+	\item L'analisi delle emozioni provate dai soggetti di un video
+	\item Riportare le analisi effettuate in forma più o meno dettagliata
+	\item Creare e gestire progetti con uno o più video
+	\item Permettere di aggregare i dati di due o più video di uno stesso
+	      progetto
+	\item Permettere la condivisione di un progetto con più utenti
+\end{itemize}
+
+\section{Gli utenti}\label{sec:gli-utenti}
+
+Gli Utenti utilizzatori della piattaforma si dividono principalmente in due
+categorie: \textbf{Analista} e \textbf{Designer}. Le relazioni che intercorrono
+fra le due categorie, sono rappresentate in \autoref{fig:tipi-utente}.
+
+\begin{table}[H]
+	\centering
+	\caption{I bisogni degli utenti di Emotionally.}
+	\label{tab:bisogni-utenti}
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.25\textwidth}|m{.5\textwidth}|>{\centering\arraybackslash}m{.1\textwidth}|@{}}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Categoria di utente}}   & {\textbf{Bisogni principali in relazione al sito}}     & {\textbf{Priorità}} \\\hline
+		\endfirsthead
+		\cellcolor{white!0}                            & Analizzare video o gruppi di video                                   & Alta                              \\
+		\cellcolor{white!0}                            & Visualizzare dei report delle analisi effettuate                     & Alta                              \\
+		\cellcolor{white!0}                            & Esportare i report delle analisi effettuate                          & Media                             \\
+		\cellcolor{white!0}                            & Condividere i progetti creati con altri utenti                       & Media                             \\
+		\multirow{-5}{*}{Analista}                     & Analizzare dei video registrati in tempo reale                       & Alta                              \\
+		\cellcolor{gray!25}                            & Visualizzare i report di analisi effettuate da altri utenti          & Alta                              \\
+		\multirow{-2}{*}{\cellcolor{gray!25} Designer} & Visualizzazione dei dati in formati strutturati e formali (es. JSON) & Alta                              \\
+		\hline
+	\end{longtable}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Gli obiettivi del commitente legati agli utenti di Emotionally.}
+	\label{tab:obiettivi-committente-utenti}
+	\rowcolors{2}{gray!25}{white!0}
+	\begin{longtable}{@{}|>{\centering\arraybackslash}m{.25\textwidth}|m{.5\textwidth}|>{\centering\arraybackslash}m{.1\textwidth}|@{}}
+		\hline
+		\rowcolor{emotionally-color!35}
+		{\textbf{Categoria di utente}} & {\textbf{Obiettivi del commitente}} & {\textbf{Priorità}} \\\hline
+		\endfirsthead
+		\cellcolor{white!0}                          & Rendere efficiente l'analisi di 
+		singoli video o gruppi di video                & 
+		Alta                              \\
+		\cellcolor{white!0}                          & Generare automaticamente i report 
+		delle analisi effettuate  & Alta                              \\
+		\multirow{-3}{*}{Analista}                   & Migliorare la comunicazione 
+		attraverso la condivisione di progetto    & Media                              \\
+		\cellcolor{gray!25}                            & Generare automaticamente i 
+		report in formati strutturati e formali (es. JSON)          & 
+		Alta                              \\
+		\multirow{-2}{*}{\cellcolor{gray!25} Designer} & Migliorare la comunicazione 
+		attraverso la condivisione di progetto & Media                              \\
+		\hline
+	\end{longtable}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[node distance=2cm]
+		\umlsimpleclass[type=abstract, x=0, y=0]{Utente}
+		\umlsimpleclass[x=-1.5, y=-2]{Analista}
+		\umlsimpleclass[x=1.5, y=-2]{Designer}
+		\umlinherit[geometry=|-|]{Analista}{Utente}
+		\umlinherit[geometry=|-|]{Designer}{Utente}
+	\end{tikzpicture}
+	\caption{Relazione tra le tipologie di utente di Emotionally}
+	\label{fig:tipi-utente}
+\end{figure}
+
+
+\section{Scenari d'uso}\label{sec:scenari-duso}
+Dei possibili scenari d'uso possono essere:
+\begin{itemize}
+	\item Un analista utilizza questo sistema per poter effettuare un'analisi 
+	delle emozioni degli utenti che visualizzano una pubblicità, un sito web o 
+	quant'altro e ricavare dei risultati da utilizzare per poter capire ciò che 
+	piace all'utente, quali emozioni hanno provato, quale riscontro ha 
+	l'elemento in analisi nei confronti dell'utente e così via.
+	\item Un designer utilizza questo sistema per poter accedere ai report 
+	precedentemente generati (solitamente da un analista) e scaricarne i 
+	risultati in vari formati compatibili con strumenti di design e 
+	programmazione per poterli utilizzare nei propri progetti.
+\end{itemize}
+
+\section{Posizionamento competitivo}\label{sec:posizionamento-competitivo}
+
+Il posizionamento competitivo di Emotionally è di offrire una piattaforma Open 
+Source tentando di contrastare il ``monopolio'' di tool a pagamento offrendo 
+una piattaforma utilizzabile gratuitamente. Uno dei bonus rispetto ai 
+competitor è la natura web del sistema che non richiede alcun tipo di 
+settaggio. Inoltre, si sfruttano le API di Affectiva, uno dei migliori 
+\textit{engine} di \textit{sentiment analysis}.
